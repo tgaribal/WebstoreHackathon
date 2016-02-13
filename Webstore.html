@@ -1,37 +1,55 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<link href="minimal.css" rel="stylesheet">
 		<title>Tim's Webstore</title>
 	</head>
 	<body>
-	<div class='header'></div>
+	<div class='header'>Welcome to our amazing e-Shop!</div>
 
-	<div class='nav'></div>
+	<div class='nav'>Nav</div>
 
 	<div class='content'>
 		<div id='harry_potter' class='book'>
-			<div class='name'></div>
-			<div class='category'></div>
-			<div class='price'></div>
+			<div class='name'>Complete Harry Potter Series</div>
+			<div class='category'>Young Adult, Fantasy</div>
+			<div class='price'>$99.98</div>
 			<div class='picture'></div>
-			<div class='selling_points'></div>
+			<div class='selling_points'>A delight for both young and old!</div>
 		</div>
 		<div id='lotr'>
-			<div class='name'></div>
-			<div class='category'></div>
-			<div class='price'></div>
+			<div class='name'>Lord of the Rings Series</div>
+			<div class='category'>Fantasy</div>
+			<div class='price'>$49.99</div>
 			<div class='picture'></div>
-			<div class='selling_points'></div>
+			<div class='selling_points'>A classic!</div>
 		</div>
 	</div>
 
-	<div class='footer'></div>
+	<div class='footer'> Questions? Email us at help@nope.com</div>
 
 
 		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 		<script>
-			//$('body').text('hello?');
+			$('.header').css( {
+				'background-color' : 'lightgreen',
+				'border-style' : 'groove',
+				'border-width' : '10px',
+				'border-color' : 'green',
+				'height' : '40',
+				'color' : 'forestgreen',
+				'text-align' : 'center'
+			});
+			$('.footer').css( {
+				'background-color' : 'lightgreen',
+				'border-style' : 'groove',
+				'border-width' : '10px',
+				'border-color' : 'green',
+				'height' : '30',
+				'color' : 'forestgreen',
+				'text-align' : 'center',
+				'align-content' : 'center'
+			});
+
 		</script>
 	</body>
 </html>
