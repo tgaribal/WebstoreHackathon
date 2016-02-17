@@ -2,61 +2,115 @@
 <html>
 	<head>
 		<title>Tim's Webstore</title>
+		<link rel="stylesheet" type="text/css" href="webstoreStyle.css">
 	</head>
 	<body>
 	<div class='header'>Welcome to our amazing e-Shop!</div>
 
-	<div class='nav'>Books Music
-	</div>
-
+	<ul class='nav'>
+		<li>Books</li>
+		<li>Music</li>
+	</ul>
 	<div class='content'>
-		<div id='harry_potter' class='book'>
-			<div class='name'>Complete Harry Potter Series</div>
-			<div class='category'>Young Adult, Fantasy</div>
-			<div class='price'>$99.98</div>
+		<!-- <div id='book1' class='product'>
+			<div class='name'></div>
+			<div class='category'></div>
 			<div class='picture'></div>
-			<div class='selling_points'>A delight for both young and old!</div>
+			<div class='sellingPoints'></div>
+			<div class='price'></div>
 		</div>
-		<div id='lotr' class='book'>
-			<div class='name'>Lord of the Rings Series</div>
-			<div class='category'>Fantasy</div>
-			<div class='price'>$49.99</div>
+		<div id='book2' class='product'>
+			<div class='name'></div>
+			<div class='category'></div>
 			<div class='picture'></div>
-			<div class='selling_points'>A classic!</div>
+			<div class='sellingPoints'></div>
+			<div class='price'></div>
 		</div>
+		<div id='album1' class='product'>
+			<div class='name'></div>
+			<div class='category'></div>
+			<div class='picture'></div>
+			<div class='sellingPoints'></div>
+			<div class='price'></div>
+		</div>
+		<div id='album2' class='product'>
+			<div class='name'></div>
+			<div class='category'></div>
+			<div class='picture'></div>
+			<div class='sellingPoints'></div>
+			<div class='price'></div>
+		</div> -->
 	</div>
-
 	<div class='footer'> Questions? Email us at help@nope.com</div>
-
-
 		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 		<script>
-			$('.header').css( {
-				'background-color' : 'lightgreen',
-				'border-style' : 'groove',
-				'border-width' : '10px',
-				'border-color' : 'green',
-				'font-size' : '2em',
-				'height' : '40',
-				'color' : 'forestgreen',
-				'text-align' : 'center',
-			});
-			$('.footer').css( {
-				'background-color' : 'lightgreen',
-				'border-style' : 'groove',
-				'border-width' : '10px',
-				'border-color' : 'green',
-				'height' : '30',
-				'color' : 'forestgreen',
-				'text-align' : 'center',
-			});
-			$('.nav').css( {
-				'border-style' : 'solid',
-				'border-width' : '2x',
-				'border-color' : 'purple',
-				'text-align' : 'center'
-			});
+			var book1 = {
+				id : 'book1',
+				name:'Complete Harry Potter Series',
+				category: 'Young Adult, Fantasy',
+				pictureURL: 'http://prodimage.images-bn.com/pimages/9780545162074_p0_v2_s1200x630.jpg',
+				sellingPoints: ['A delight for both young and old!', 'The cultural phenomenon'],
+				price: 99.98
+			};
+			var book2 = {
+				id : 'book2',
+				name: 'Lord of the Rings Series',
+				category:'Fantasy',
+				pictureURL: 'http://www.fandomfollowing.com/wp-content/uploads/2016/01/1437205930680.jpg',
+				sellingPoints: ['A classic!', 'For all ages'],
+				price: 49.99
+			};
+			var album1 = {
+				id : 'album1',
+				name: 'Beyonce',
+				category: 'Pop, R&B',
+				pictureURL: 'http://d.ibtimes.co.uk/en/full/1474971/beyonce-album.jpg',
+				sellingPoints: ['The groundbreaking album', 'Complete with all music videos!'],
+				price: 19.98
+			};
+			var album2 = {
+				id : 'album2',
+				name: 'Beyonce 4',
+				category: 'Pop, R&B',
+				pictureURL: 'https://upload.wikimedia.org/wikipedia/en/c/ca/Beyonc%C3%A9_-_4.png',
+				sellingPoints: ['Queen Bey Classic', 'The queen returns'],
+				price: 9.99
+			};
+			function addProduct (product) {
+				$('.content').append('<div id="'+product.id+'" class="product"></div>');
+				$('#'+product.id).append($('<div class=name></div>').text(product.name));
+				$('#'+product.id).append($('<div class=category></div>').text(product.category));
+				$('#'+product.id).append($('<div class=picture></div>').append('<img width="100%" src="'+product.pictureURL+'"/>'));
+				$('#'+product.id).append($('<div class=sellingPoints></div>').append(product.sellingPoints));
+				$('#'+product.id).append($('<div class=price></div>').text('$'+product.price));
+				// $('#'+product.id+' .name').text(product.name);
+				// $('#'+product.id+' .category').text(product.category);
+				// $('#'+product.id+' .picture').append('<img width="100%" src="'+product.pictureURL+'"/>');
+				// $('#'+product.id+' .sellingPoints').append(product.sellingPoints);
+				// $('#'+product.id+' .price').text('$'+product.price);
+			};
+			addProduct(book1);
+			addProduct(book2);
+			addProduct(album1);
+			addProduct(album2);
 
-		</script>
+			// $('#book2 .name').text(book2.name);
+			// $('#book2 .category').text(book2.category);
+			// $('#book2 .picture').append('<img width="100%" src="'+book2.pictureURL+'"/>');
+			// $('#book2 .sellingPoints').text(book2.sellingPoints);
+			// $('#book2 .price').text('$'+book2.price);
+
+			// $('#album1 .name').text(album1.name);
+			// $('#album1 .category').text(album1.category);
+			// $('#album1 .picture').append('<img width="100%" src="'+album1.pictureURL+'"/>');
+			// $('#album1 .sellingPoints').text(album1.sellingPoints);
+			// $('#album1 .price').text('$'+album1.price);
+
+			// $('#album2 .name').text(album2.name);
+			// $('#album2 .category').text(album2.category);
+			// $('#album2 .picture').append('<img width="100%" src="'+album2.pictureURL+'"/>');
+			// $('#album2 .sellingPoints').text(album2.sellingPoints);
+			// $('#album2 .price').text('$'+album2.price);
+	</script>
 	</body>
 </html>

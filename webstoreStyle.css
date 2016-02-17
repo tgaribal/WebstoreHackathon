@@ -1,11 +1,58 @@
-body {
-  background-color: green;
+.header {
+  background-color : lightgreen;
+  border-style : groove;
+  border-width : 10px;
+  border-color : green;
+  font-size : 2em;
+  height : 40;
+  color : forestgreen;
+  text-align : center;
+  height : auto
 }
-i {
-  font-size: 300%;
+.footer{
+  background-color : lightgreen;
+  border-style : groove;
+  border-width : 10px;
+  border-color : green;
+  height : 30;
+  color : forestgreen;
+  text-align : center;
+  height : auto;
 }
-#primary {
-  font-size: 300%;
-  text-align: center;
-  font-family: 'Times New Roman';
+.nav{
+  border-style : solid;
+  border-width : 2px;
+  border-color : purple;
+  text-align : center;
+  list-style-type : none;
+  display : block;
+  margin : 10px;
+  padding : 0;
+  max-width : 50px;
 }
+.product{
+  border-style : solid;
+  border-width : 2px;
+  border-color : purple;
+  max-width : 250px;
+  padding : 10px;
+  margin : 10px;
+}
+.name{
+  font-family : impact;
+  style : bold;
+  font-size : 1.25em;
+  text-align : center;
+  text-decoration : underline;
+}
+.category{
+  font-family : helvetica;
+  font-size : 0.5em;
+  text-align : center;
+  font-style : italic;
+}
+.price{
+  font-weight : bold;
+  text-align : left;
+}
+
